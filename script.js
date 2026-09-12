@@ -14,7 +14,7 @@ const CONFIG = {
         whatsapp: "9133257474",
         phone: "9133257474",
         email: "sesharaogv@gmail.com",
-        address: "214/b Aditya Enclave, Neelagiri block, Ameerpet, beside Ameerpet metro, Hyderabad - 500016"
+        address: "214/B, Nelagiri Block, Aditya Enclave, Ameerpet, Hyderabad-500016"
     },
     
     // Statistics for the About Page "Our Impact" section
@@ -142,12 +142,14 @@ const CONFIG = {
     // Banking Partners (Easily updatable)
     bankingPartners: [
         "HDFC Bank",
+        "IDFC Bank",
         "Axis Bank",
         "Kotak Bank",
         "Yes Bank",
         "IndusInd Bank",
         "Bajaj Finserv",
         "Tata Capital",
+        "L&T Finance",
         "Protium",
         "Poonawalla Fincorp",
         "Aditya Birla",

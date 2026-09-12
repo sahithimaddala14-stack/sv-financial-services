@@ -449,7 +449,7 @@ body {
     color: var(--primary-white);
     width: 500px;
     max-width: 40%;
-    animation: fadeInUp 800ms ease-out forwards;
+    animation: heroFadeInUp 800ms ease-out forwards;
     animation-delay: 200ms;
 }
 
@@ -495,6 +495,17 @@ body {
     height: 30px;
     background: var(--primary-white);
     margin: 0 auto;
+}
+
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(calc(-50% + 30px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes fadeInUp {
