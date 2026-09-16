@@ -14,7 +14,7 @@ const CONFIG = {
         whatsapp: "9133257272",
         phone: "9133257272",
         email: "sesharaogv@gmail.com",
-        address: "214/B, Nelagiri Block, Aditya Enclave, Ameerpet, Hyderabad-500016"
+        address: "214/B, Nilgiri Block, Aditya Enclave, Ameerpet, Hyderabad - 500016"
     },
     
     // Statistics for the About Page "Our Impact" section
