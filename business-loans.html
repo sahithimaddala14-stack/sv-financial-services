@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business Loans from S V Financial Services.">
+    <meta name="theme-color" content="#0F1B3C">
+    <title>Business Loans | S V Financial Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .business-page {
+            padding-top: 60px;
+        }
+
+        .business-hero {
+            background: linear-gradient(135deg, var(--primary-navy), #1b3764);
+            color: var(--primary-white);
+            padding: clamp(72px, 11vw, 140px) 0;
+        }
+
+        .business-hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .business-hero h1 {
+            color: var(--primary-white);
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.08;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .business-hero p {
+            max-width: 620px;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .business-hero-image {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .business-hero-cta {
+            margin-top: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .business-section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .business-section--soft {
+            background: var(--bg-light);
+        }
+
+        .business-section h2 {
+            color: var(--primary-navy);
+            font-size: clamp(30px, 4vw, 44px);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .business-section-intro {
+            max-width: 700px;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .business-list,
+        .business-help-list {
+            display: grid;
+            gap: var(--spacing-md);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .business-list {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .business-list li,
+        .business-help-list li {
+            background: var(--primary-white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            color: var(--text-dark);
+            padding: var(--spacing-md) var(--spacing-lg);
+        }
+
+        .business-list li::before,
+        .business-help-list li::before {
+            content: "•";
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .business-help-list {
+            max-width: 820px;
+        }
+
+        .business-benefits {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .business-benefit {
+            background: var(--primary-white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            padding: var(--spacing-lg);
+        }
+
+        .business-benefit h3 {
+            color: var(--primary-navy);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .business-benefit p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .business-cta {
+            background: var(--primary-navy);
+            color: var(--primary-white);
+            text-align: center;
+        }
+
+        .business-cta h2 {
+            color: var(--primary-white);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .business-cta p {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .business-cta-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+
+        .business-call {
+            color: var(--primary-white);
+            border: 2px solid var(--primary-white);
+        }
+
+        .business-disclaimer {
+            color: var(--text-light);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: var(--spacing-lg);
+        }
+
+        @media (max-width: 768px) {
+            .business-hero-grid,
+            .business-list {
+                grid-template-columns: 1fr;
+            }
+
+            .business-benefits {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .business-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/LOGO.png" alt="S V Financial Services Logo" class="logo-img">
+                <span class="logo-name">S V Financial Services</span>
+            </div>
+
+            <nav class="nav-desktop" id="navDesktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="index.html#services" class="nav-link">Our Services</a>
+                <a href="index.html#partners" class="nav-link">Partner Banks</a>
+                <a href="index.html#contact-cta" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="btn-call" href="tel:9133257474">Call Us</a>
+                <a class="btn-primary" href="https://wa.me/919133257474?text=Hi%20S%20V%20Financial%20Services%2C%20I%20am%20interested%20in%20Business%20Loans.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer">Apply Now</a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="close-menu-btn" id="closeMenuBtn">×</button>
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="about.html" class="mobile-menu-link">About Us</a>
+            <a href="index.html#services" class="mobile-menu-link">Our Services</a>
+            <a href="index.html#partners" class="mobile-menu-link">Partner Banks</a>
+            <a href="index.html#contact-cta" class="mobile-menu-link">Contact Us</a>
+            <a href="tel:9133257474" class="mobile-menu-link">Call Us</a>
+            <a class="btn-primary full-width" href="https://wa.me/919133257474?text=Hi%20S%20V%20Financial%20Services%2C%20I%20am%20interested%20in%20Business%20Loans.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer">Apply Now</a>
+        </div>
+    </nav>
+
+    <main class="business-page">
+        <section class="business-hero">
+            <div class="container business-hero-grid">
+                <div>
+                    <h1>Business Loans</h1>
+                    <p>Business Loans can help businesses access financing for working capital, expansion, equipment, or other business requirements. S V Financial Services helps connect businesses with suitable banking and NBFC partners based on their requirements and profile.</p>
+                </div>
+                <img class="business-hero-image" src="assets/loans/business loan.png" alt="Business loan">
+            </div>
+            <div class="container business-hero-cta">
+                <a class="btn-primary btn-large" href="https://wa.me/919133257474?text=Hi%20S%20V%20Financial%20Services%2C%20I%20am%20interested%20in%20Business%20Loans.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer">Apply Now</a>
+            </div>
+        </section>
+
+        <section class="business-section business-section--soft">
+            <div class="container">
+                <h2>Who It May Suit</h2>
+                <p class="business-section-intro">Business financing may be relevant for a range of eligible business requirements, including:</p>
+                <ul class="business-list">
+                    <li>Working capital requirements</li>
+                    <li>Business expansion</li>
+                    <li>Equipment or asset purchases</li>
+                    <li>Other eligible business needs</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="business-section">
+            <div class="container">
+                <h2>How We Help</h2>
+                <ul class="business-help-list">
+                    <li>Understand the business requirement</li>
+                    <li>Review the applicant profile and requirements</li>
+                    <li>Identify suitable financing options from our banking/NBFC network</li>
+                    <li>Coordinate through the lender's assessment and documentation process</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="business-section business-section--soft">
+            <div class="container">
+                <h2>Why S V Financial Services</h2>
+                <div class="business-benefits">
+                    <article class="business-benefit">
+                        <h3>Personalized Solutions</h3>
+                        <p>Financing options tailored to your needs</p>
+                    </article>
+                    <article class="business-benefit">
+                        <h3>Transparent Process</h3>
+                        <p>Clear guidance at every step</p>
+                    </article>
+                    <article class="business-benefit">
+                        <h3>Ongoing Support</h3>
+                        <p>We're with you throughout</p>
+                    </article>
+                    <article class="business-benefit">
+                        <h3>Trusted Banking Network</h3>
+                        <p>Connecting you with a wide network of banking partners</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="business-section business-cta">
+            <div class="container">
+                <h2>Explore Business Loan Options</h2>
+                <p>Connect with our team to discuss your business requirements.</p>
+                <div class="business-cta-actions">
+                    <a class="btn-primary btn-large" href="https://wa.me/919133257474?text=Hi%20S%20V%20Financial%20Services%2C%20I%20am%20interested%20in%20Business%20Loans.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer">Get in Touch</a>
+                    <a class="btn-secondary btn-large business-call" href="tel:9133257474">Call Us</a>
+                </div>
+                <p class="business-disclaimer">Loan amount may differ. Final eligibility, loan amount, interest rate and approval are subject to lender assessment and applicable criteria.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>S V Financial Services</h3>
+                    <p>Established in 2017, connecting you with trusted banking partners for personalized financial solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="index.html#partners">Partner Banks</a></li>
+                        <li><a href="index.html#contact-cta">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p><strong>Phone:</strong> <a href="tel:9133257474">9133257474</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919133257474">WhatsApp Us</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:sesharaogv@gmail.com">sesharaogv@gmail.com</a><br><a href="mailto:ghemanth.sv@gmail.com">ghemanth.sv@gmail.com</a></p>
+                    <p><strong>Address:</strong> 214/B, Nelagiri Block, Aditya Enclave, Ameerpet, Hyderabad-500016</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2017–<span id="year"></span> S V Financial Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
