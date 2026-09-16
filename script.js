@@ -11,8 +11,8 @@ const CONFIG = {
     company: {
         name: "S V Financial Services",
         established: 2017,
-        whatsapp: "9133257474",
-        phone: "9133257474",
+        whatsapp: "9133257272",
+        phone: "9133257272",
         email: "sesharaogv@gmail.com",
         address: "214/B, Nelagiri Block, Aditya Enclave, Ameerpet, Hyderabad-500016"
     },
@@ -60,73 +60,83 @@ const CONFIG = {
     loanSolutions: [
         {
             key: "home",
-            navLabel: "Home",
+            navLabel: "Home Loans",
             productName: "Home Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "home"
+            icon: "home",
+            href: "home-loans.html"
         },
         {
             key: "business",
-            navLabel: "Business",
+            navLabel: "Business Loans",
             productName: "Business Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "business"
-        },
-        {
-            key: "education",
-            navLabel: "Education",
-            productName: "Education Loans",
-            description: "Explore this solution with S V Financial Services.",
-            icon: "education"
-        },
-        {
-            key: "vehicle",
-            navLabel: "Vehicle",
-            productName: "Car Loans",
-            description: "Explore this solution with S V Financial Services.",
-            icon: "vehicle"
-        },
-        {
-            key: "professional",
-            navLabel: "Professional",
-            productName: "Professional Loans",
-            description: "Explore this solution with S V Financial Services.",
-            icon: "professional"
+            icon: "business",
+            href: "business-loans.html"
         },
         {
             key: "personal",
-            navLabel: "Personal",
+            navLabel: "Personal Loans",
             productName: "Personal Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "personal"
+            icon: "personal",
+            href: "personal-loans.html"
+        },
+        {
+            key: "professional",
+            navLabel: "Professional Loans",
+            productName: "Professional Loans",
+            description: "Explore this solution with S V Financial Services.",
+            icon: "professional",
+            href: "professional-loans.html"
         },
         {
             key: "mortgage",
-            navLabel: "Mortgage",
+            navLabel: "Mortgage Loans",
             productName: "Mortgage Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "mortgage"
+            icon: "mortgage",
+            href: "mortgage-loans.html"
         },
         {
-            key: "equipment",
-            navLabel: "Equipment",
-            productName: "Equipment Loans",
+            key: "vehicle",
+            navLabel: "Car Loans",
+            productName: "Car Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "equipment"
+            icon: "vehicle",
+            href: "car-loans.html"
         },
         {
             key: "commercial-vehicle",
-            navLabel: "Commercial Vehicle",
+            navLabel: "Commercial Vehicle Loans",
             productName: "Commercial Vehicle Loans",
             description: "Explore this solution with S V Financial Services.",
-            icon: "truck"
+            icon: "truck",
+            href: "commercial-vehicle-loans.html"
         },
         {
             key: "cc-bg",
             navLabel: "CC & BG's",
             productName: "CC & BG's",
             description: "Explore this solution with S V Financial Services.",
-            icon: "shield"
+            icon: "shield",
+            href: "cc-bg-loans.html"
+        },
+        {
+            key: "education",
+            navLabel: "Education Loans",
+            productName: "Education Loans",
+            description: "Explore this solution with S V Financial Services.",
+            icon: "education",
+            href: "education-loans.html"
+        },
+        {
+            key: "equipment",
+            navLabel: "Equipment Loans",
+            productName: "Equipment Loans",
+            description: "Explore this solution with S V Financial Services.",
+            icon: "equipment",
+            href: "equipment-loans.html"
         }
     ],
 
@@ -266,15 +276,18 @@ const CONFIG = {
     leadership: [
         {
             name: "Hema Latha",
-            title: "Director & Founder"
+            title: "Director & Founder",
+            image: "assets/leaders/hema-latha.jpeg"
         },
         {
             name: "GV Sesha Rao",
-            title: "Managing Director & Major Stake Holder"
+            title: "Director",
+            image: "assets/leaders/hemanth-kumar.jpeg"
         },
         {
             name: "Hemanth Kumar",
-            title: "Managing Director & Major Stake Holder"
+            title: "Director",
+            image: "assets/leaders/gv-sesha-rao.jpeg"
         }
     ],
     
@@ -454,23 +467,21 @@ function setupLoanSolutions() {
     if (!nav) return;
 
     CONFIG.loanSolutions.forEach((item, index) => {
-        const button = document.createElement('button');
-        button.className = 'loan-nav__item' + (index === 0 ? ' active' : '');
-        button.type = 'button';
-        button.dataset.key = item.key;
-        button.innerHTML = `
+        const link = document.createElement('a');
+        link.className = 'loan-nav__item' + (index === 0 ? ' active' : '');
+        link.href = item.href;
+        link.dataset.key = item.key;
+        link.innerHTML = `
             <span class="loan-nav__icon">${LOAN_NAV_ICONS[item.icon] || ''}</span>
             <span class="loan-nav__label">${item.navLabel}</span>
         `;
 
-        button.addEventListener('click', () => {
+        link.addEventListener('click', () => {
             document.querySelectorAll('.loan-nav__item').forEach(el => el.classList.remove('active'));
-            button.classList.add('active');
-            displayLoanContent(item.key);
-            openLoanWhatsApp(item);
+            link.classList.add('active');
         });
 
-        nav.appendChild(button);
+        nav.appendChild(link);
     });
 
     // Show the first solution by default
@@ -1193,7 +1204,7 @@ function renderLeadership() {
         card.style.animationDelay = (index * 100) + 'ms';
         card.innerHTML = `
             <div class="leader-photo">
-                <span>👤</span>
+                <img src="${leader.image}" alt="${leader.name}">
             </div>
             <div class="leader-name">${leader.name}</div>
             <div class="leader-title">${leader.title}</div>
@@ -1404,6 +1415,8 @@ if (document.readyState === 'loading') {
 
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.querySelector('.hero-video');
+    const audioControl = document.getElementById('heroAudioControl');
+
     if (video) {
         // Show fallback image if video doesn't load
         video.addEventListener('error', () => {
@@ -1411,6 +1424,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fallback) {
                 fallback.style.display = 'block';
             }
+        });
+    }
+
+    if (video && audioControl) {
+        const updateAudioControl = () => {
+            const isMuted = video.muted;
+            audioControl.setAttribute('aria-pressed', String(!isMuted));
+            audioControl.setAttribute('aria-label', isMuted ? 'Turn sound on' : 'Turn sound off');
+            audioControl.setAttribute('title', isMuted ? 'Turn sound on' : 'Turn sound off');
+        };
+
+        updateAudioControl();
+
+        audioControl.addEventListener('click', () => {
+            const shouldUnmute = video.muted;
+            video.muted = !shouldUnmute;
+
+            if (shouldUnmute) {
+                const playback = video.play();
+                if (playback) {
+                    playback.catch(() => {
+                        video.muted = true;
+                        updateAudioControl();
+                    });
+                }
+            }
+
+            updateAudioControl();
         });
     }
 });

@@ -14,7 +14,7 @@
     <title>S V Financial Services - Premium Financial Solutions</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
     <!-- PERSISTENT ₹ COIN — single reusable signature visual, travels via JS across the whole page -->
     <div class="persistent-rupee" id="persistentRupee" aria-hidden="true">
         <div class="persistent-rupee__spin">
@@ -103,13 +103,29 @@
             <nav class="nav-desktop" id="navDesktop">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About Us</a>
-                <a href="#services" class="nav-link">Our Services</a>
+                <details class="nav-dropdown">
+                    <summary class="nav-link nav-link--dropdown">
+                        <span>Our Services</span>
+                        <span class="nav-caret" aria-hidden="true">▾</span>
+                    </summary>
+                    <div class="nav-dropdown-menu">
+                        <a href="home-loans.html" class="dropdown-link">Home Loans</a>
+                        <a href="business-loans.html" class="dropdown-link">Business Loans</a>
+                        <a href="personal-loans.html" class="dropdown-link">Personal Loans</a>
+                        <a href="professional-loans.html" class="dropdown-link">Professional Loans</a>
+                        <a href="mortgage-loans.html" class="dropdown-link">Mortgage Loans</a>
+                        <a href="car-loans.html" class="dropdown-link">Car Loans</a>
+                        <a href="commercial-vehicle-loans.html" class="dropdown-link">Commercial Vehicle Loans</a>
+                        <a href="cc-bg-loans.html" class="dropdown-link">CC &amp; BG's</a>
+                        <a href="education-loans.html" class="dropdown-link">Education Loans</a>
+                        <a href="equipment-loans.html" class="dropdown-link">Equipment Loans</a>
+                    </div>
+                </details>
                 <a href="#partners" class="nav-link">Partner Banks</a>
                 <a href="#contact-cta" class="nav-link">Contact Us</a>
             </nav>
             
             <div class="header-actions">
-                <button class="btn-call" id="callBtn">Call Us</button>
                 <button class="btn-primary" id="applyBtnHeader">Apply Now</button>
             </div>
             
@@ -127,10 +143,27 @@
             <button class="close-menu-btn" id="closeMenuBtn">×</button>
             <a href="#home" class="mobile-menu-link">Home</a>
             <a href="about.html" class="mobile-menu-link">About Us</a>
-            <a href="#services" class="mobile-menu-link">Our Services</a>
+            <details class="mobile-menu-group">
+                <summary class="mobile-menu-link mobile-menu-link--toggle">
+                    <span>Our Services</span>
+                    <span class="mobile-caret" aria-hidden="true">▾</span>
+                </summary>
+                <div class="mobile-submenu">
+                    <a href="home-loans.html">Home Loans</a>
+                    <a href="business-loans.html">Business Loans</a>
+                    <a href="personal-loans.html">Personal Loans</a>
+                    <a href="professional-loans.html">Professional Loans</a>
+                    <a href="mortgage-loans.html">Mortgage Loans</a>
+                    <a href="car-loans.html">Car Loans</a>
+                    <a href="commercial-vehicle-loans.html">Commercial Vehicle Loans</a>
+                    <a href="cc-bg-loans.html">CC &amp; BG's</a>
+                    <a href="education-loans.html">Education Loans</a>
+                    <a href="equipment-loans.html">Equipment Loans</a>
+                </div>
+            </details>
             <a href="#partners" class="mobile-menu-link">Partner Banks</a>
             <a href="#contact-cta" class="mobile-menu-link">Contact Us</a>
-            <a href="tel:9133257474" class="mobile-menu-link">Call Us</a>
+            <a href="tel:9133257272" class="mobile-menu-link">Call Us</a>
             <button class="btn-primary full-width" id="applyBtnMobile">Apply Now</button>
         </div>
     </nav>
@@ -142,6 +175,19 @@
                 <source src="assets/hero-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+
+            <button class="hero-audio-control" id="heroAudioControl" type="button"
+                aria-label="Turn sound on" aria-pressed="false" title="Turn sound on">
+                <svg class="hero-audio-icon hero-audio-icon--muted" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 9v6h4l5 4V5L8 9H4Z"></path>
+                    <path d="m17 9 4 6m0-6-4 6"></path>
+                </svg>
+                <svg class="hero-audio-icon hero-audio-icon--unmuted" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 9v6h4l5 4V5L8 9H4Z"></path>
+                    <path d="M16 9.5a4 4 0 0 1 0 5"></path>
+                    <path d="M18.5 7a7.5 7.5 0 0 1 0 10"></path>
+                </svg>
+            </button>
             
             <img src="assets/hero.png" alt="Hero Background" class="hero-fallback">
             
@@ -384,8 +430,8 @@
                     
                     <div class="footer-column">
                         <h4>Contact</h4>
-                        <p><strong>Phone:</strong> <a href="tel:9133257474">9133257474</a></p>
-                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919133257474">WhatsApp Us</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:9133257272">9133257272</a></p>
+                        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919133257272">WhatsApp Us</a></p>
                         <p><strong>Email:</strong> <a href="mailto:sesharaogv@gmail.com">sesharaogv@gmail.com</a><br><a href="mailto:ghemanth.sv@gmail.com">ghemanth.sv@gmail.com</a></p>
                         <p><strong>Address:</strong> 214/B, Nelagiri Block, Aditya Enclave, Ameerpet, Hyderabad-500016</p>
                     </div>
