@@ -3057,6 +3057,10 @@ body:not(.home-page) h6 {
         width: 88%;
         max-width: none;
     }
+
+.hero-video {
+       object-fit: cover;
+}
 }
 
 @media (max-width: 360px) {
@@ -3088,4 +3092,42 @@ body:not(.home-page) h6 {
         max-width: 100%;
         height: auto;
     }
+}
+@media (max-width: 768px) {
+    .hero-content {
+        left: 6%;
+        top: calc(50% + 25px);
+        width: 88%;
+        max-width: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    .hero-ctas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 74px;
+        z-index: 20;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .hero-ctas button {
+        flex: 1 1 0;
+        width: auto;
+        min-height: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 620px;
+min-height: 620px;
 }
