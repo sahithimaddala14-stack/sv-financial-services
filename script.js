@@ -281,12 +281,12 @@ const CONFIG = {
         },
         {
             name: "GV Sesha Rao",
-            title: "Director",
+            title: "Managing Director",
             image: "assets/leaders/hemanth-kumar.jpeg"
         },
         {
             name: "Hemanth Kumar",
-            title: "Director",
+            title: "Managing Director",
             image: "assets/leaders/gv-sesha-rao.jpeg"
         }
     ],
