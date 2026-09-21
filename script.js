@@ -351,6 +351,9 @@ function setupNavigation() {
     // Close mobile menu when link clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
+            if (link.classList.contains('mobile-menu-link--toggle')) {
+                return;
+            }
             mobileMenu.classList.remove('active');
         });
     });
