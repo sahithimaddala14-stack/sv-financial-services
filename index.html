@@ -213,7 +213,10 @@
                 </svg>
             </button>
             
-            <img src="assets/hero.png" alt="Hero Background" class="hero-fallback">
+            <picture>
+                <source media="(max-width: 768px)" srcset="assets/mobile/mobile-hero-image.png">
+                <img src="assets/hero.png" alt="Hero Background" class="hero-fallback">
+            </picture>
             
             <div class="hero-content">
                <h1 class="hero-title hero-title--refined">
